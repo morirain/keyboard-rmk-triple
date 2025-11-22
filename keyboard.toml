@@ -1,50 +1,117 @@
-# Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "RMK Keyboard"
-product_name = "RMK Keyboard"
+name = "Triple"
+product_name = "Triple"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "haobo"
-chip = "rp2040"
+manufacturer = "morirain"
+chip = "nrf52840"
 
 [matrix]
-# Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-output_pins = ["PIN_19", "PIN_20", "PIN_21"]
-# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
+# Row and col pins are mandatory
+row_pins = ["P0_06", "P1_11", "P0_10", "P1_00"]
+col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
+# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
 
 [layout]
 rows = 4
-cols = 3
-layers = 2
-keymap = [
-    [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
-    ],
-    [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
-    ],
-]
+cols = 5
+layers = 1
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3) (0,4)
+(1,0) (1,1) (1,2) (1,3)
+(2,0) (2,1) (2,2) (2,3) (2,4)
+(3,0) (3,1)       (3,3) (3,4)
+"""
+[[layer]]
+name = "base_layer"
+keys = """
+No      Escape  Q          W       Delete
+Tab     A       S          D
+LShift  Z       X          C       No
+LCtrl   LAlt               Space   No
+
+[aliases]
+my_copy = "WM(C, LCtrl)"
+my_paste = "WM(V, LCtrl)"
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
-# capslock.pin = "PB2"
-# capslock.low_active = true
+capslock.pin = "P0_30"
+capslock.low_active = false
 # scrolllock.pin = "PA3"
 # scrolllock.low_active = true
 # Just ignore if no light pin is used for it
 # numslock.pin = "PA5"
 # numslock.low_active = true
 
+# Encoder 0
+[[input_device.encoder]]
+pin_a = "P0_29"
+pin_b = "P0_31"
+internal_pullup = true
+phase = "resolution"
+resolution = 2
+# Encoder 2
+[[input_device.encoder]]
+pin_a = "P0_20"
+pin_b = "P0_17"
+internal_pullup = true
+phase = "resolution"
+resolution = 2
+# Encoder 3
+[[input_device.encoder]]
+pin_a = "P0_24"
+pin_b = "P0_22"
+internal_pullup = true
+phase = "resolution"
+resolution = 2
 
+# Whether to use the MCU's internal pull-up resistor, default to false
+# Working mode of the encoder
+# Available modes:
+# - default: resolution = 1
+# - resolution: custom resolution, requires specifying resolution and reverse parameters
+
+# `resolution` represents the number of steps generated per detent.
+#
+# When your encoder datasheet lists:
+#   - detent = number of mechanical detent positions  
+#   - pulse  = number of full quadrature cycles (A/B cycles)  
+#
+# Then the relationship is:
+#   resolution = (pulse × 4) / detent
+# because each full quadrature cycle (pulse) produces 4 edge transitions.
+#
+# For example — in the ALPS EC11E series(https://tech.alpsalpine.com/cms.media/product_catalog_ec_01_ec11e_en_611f078659.pdf):
+#   detent = 30, pulse = 15 → resolution = (15 × 4) / 30 = 2
+
+# Whether the direction of the rotary encoder is reversed.
+reverse = false
 
 [storage]
 # Storage feature is enabled by default
 # enabled = false
+# clear_storage = true
+
+[ble]
+enabled = true
+# vddh has an internal voltage divider
+battery_adc_pin = "vddh"
+# Or
+# battery_adc_pin = "P0_04"
+# adc_divider_measured = 2000
+# adc_divider_total = 2806
+
+[behavior.combo]
+timeout = "150ms"
+combos = [
+]
+
+[behavior.fork]
+forks = [
+]
+
+[rmk]
+combo_max_num = 128 
+fork_max_num = 16
