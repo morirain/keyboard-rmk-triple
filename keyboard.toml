@@ -18,20 +18,14 @@ output_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 rows = 4
 cols = 5
 layers = 1
-matrix_map = """
-(0,0) (0,1) (0,2) (0,3) (0,4)
-(1,0) (1,1) (1,2) (1,3)
-(2,0) (2,1) (2,2) (2,3) (2,4)
-(3,0) (3,1)       (3,3) (3,4)
-"""
-[[layer]]
-name = "base_layer"
-keys = """
-No      Escape  Q          W       Delete
-Tab     A       S          D
-LShift  Z       X          C       No
-LCtrl   LAlt               Space   No
-"""
+keymap = [
+    [
+        ["_", "Escape", "Q", "W", "Delete"],
+        ["Tab", "A", "S", "D"],
+        ["LShift", "Z", "X", "C", "_"],
+        ["LCtrl", "LAlt", "No", "Space", "_"]
+    ]
+]
 
 [aliases]
 my_copy = "WM(C, LCtrl)"
@@ -39,8 +33,8 @@ my_paste = "WM(V, LCtrl)"
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
-capslock.pin = "P0_30"
-capslock.low_active = false
+# capslock.pin = "P0_30"
+# capslock.low_active = false
 # scrolllock.pin = "PA3"
 # scrolllock.low_active = true
 # Just ignore if no light pin is used for it
