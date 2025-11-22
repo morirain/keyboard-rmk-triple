@@ -21,7 +21,7 @@ layers = 1
 keymap = [
     [
         ["_", "Escape", "Q", "W", "Delete"],
-        ["Tab", "A", "S", "D"],
+        ["Tab", "A", "S", "D", "No"],
         ["LShift", "Z", "X", "C", "_"],
         ["LCtrl", "LAlt", "No", "Space", "_"]
     ]
