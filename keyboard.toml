@@ -30,6 +30,7 @@ No      Escape  Q          W       Delete
 Tab     A       S          D
 LShift  Z       X          C       No
 LCtrl   LAlt               Space   No
+"""
 
 [aliases]
 my_copy = "WM(C, LCtrl)"
