@@ -50,20 +50,20 @@ phase = "resolution"
 resolution = 2
 # Encoder 2
 [[input_device.encoder]]
-pin_a = "P0_24"
-pin_b = "P0_22"
+pin_a = "P0_20"
+pin_b = "P0_17"
 internal_pullup = true
 phase = "resolution"
 resolution = 2
 # Encoder 3
 [[input_device.encoder]]
-pin_a = "P0_17"
-pin_b = "P0_20"
+pin_a = "P0_24"
+pin_b = "P1_01"
 internal_pullup = true
 phase = "resolution"
 resolution = 2
 # Whether the direction of the rotary encoder is reversed.
-reverse = true
+# reverse = true
 # Whether to use the MCU's internal pull-up resistor, default to false
 # Working mode of the encoder
 # Available modes:
@@ -110,3 +110,4 @@ forks = [
 [rmk]
 combo_max_num = 128 
 fork_max_num = 16
+debounce_time = 30
