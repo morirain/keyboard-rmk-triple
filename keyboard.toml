@@ -50,15 +50,15 @@ phase = "resolution"
 resolution = 2
 # Encoder 2
 [[input_device.encoder]]
-pin_a = "P0_20"
-pin_b = "P0_17"
+pin_a = "P0_24"
+pin_b = "P0_22"
 internal_pullup = true
 phase = "resolution"
 resolution = 2
 # Encoder 3
 [[input_device.encoder]]
-pin_a = "P0_22"
-pin_b = "P0_24"
+pin_a = "P0_17"
+pin_b = "P0_20"
 internal_pullup = true
 phase = "resolution"
 resolution = 2
