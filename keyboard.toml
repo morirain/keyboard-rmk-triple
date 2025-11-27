@@ -17,15 +17,24 @@ col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 [layout]
 rows = 4
 cols = 5
-layers = 1
+layers = 2
 keymap = [
     [
-        ["_", "Escape", "Q", "W", "Delete"],
+        ["MO(1)", "Escape", "Q", "W", "Delete"],
         ["Tab", "A", "S", "D", "No"],
         ["LShift", "Z", "X", "C", "_"],
-        ["LCtrl", "LAlt", "No", "Space", "_"]
+        ["LCtrl", "LAlt", "No", "Space", "_"]  
+    ],
+    [
+        ["_", "User0", "User1", "User2", "_"],
+        ["_", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "No", "_", "_"],
     ]
 ]
+
+[host]
+unlock_keys = [[0, 0], [3, 4]]
 
 [aliases]
 my_copy = "WM(C, LCtrl)"
