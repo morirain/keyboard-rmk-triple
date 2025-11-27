@@ -57,12 +57,13 @@ phase = "resolution"
 resolution = 2
 # Encoder 3
 [[input_device.encoder]]
-pin_a = "P0_24"
-pin_b = "P0_22"
+pin_a = "P0_22"
+pin_b = "P0_24"
 internal_pullup = true
 phase = "resolution"
 resolution = 2
-
+# Whether the direction of the rotary encoder is reversed.
+reverse = true
 # Whether to use the MCU's internal pull-up resistor, default to false
 # Working mode of the encoder
 # Available modes:
@@ -82,8 +83,6 @@ resolution = 2
 # For example — in the ALPS EC11E series(https://tech.alpsalpine.com/cms.media/product_catalog_ec_01_ec11e_en_611f078659.pdf):
 #   detent = 30, pulse = 15 → resolution = (15 × 4) / 30 = 2
 
-# Whether the direction of the rotary encoder is reversed.
-reverse = false
 
 [storage]
 # Storage feature is enabled by default
