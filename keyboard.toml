@@ -23,7 +23,7 @@ keymap = [
         ["MO(1)", "Escape", "Q", "W", "Delete"],
         ["Tab", "A", "S", "D", "No"],
         ["LShift", "Z", "X", "C", "_"],
-        ["LCtrl", "LAlt", "No", "Space", "_"]  
+        ["LCtrl", "LAlt", "No", "Space", "_"]
     ],
     [
         ["_", "User0", "User1", "User2", "_"],
