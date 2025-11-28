@@ -129,10 +129,6 @@ forks = [
 
 [[behavior.macro.macros]]
 operations = [
-    { operation = "tap", keycode = "TD(0)" },
-    { operation = "tap", keycode = "TD(0)" },
-    { operation = "tap", keycode = "TD(0)" },
-    { operation = "tap", keycode = "TD(0)" }
 ]
 
 [rmk]
