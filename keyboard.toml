@@ -13,6 +13,8 @@ row_pins = ["P0_06", "P1_11", "P0_10", "P1_00"]
 col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
+# Debouncer mode: "default"(can be ignored) or "fast"
+debouncer = "fast"
 
 [layout]
 rows = 4
@@ -121,3 +123,7 @@ forks = [
 combo_max_num = 128 
 fork_max_num = 16
 debounce_time = 30
+
+[storage]
+# Set `clear_storage` to true to clear all the stored info when the keyboard boots
+clear_storage = true
