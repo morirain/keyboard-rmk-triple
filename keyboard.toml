@@ -98,9 +98,10 @@ reverse = true
 
 [storage]
 # Storage feature is enabled by default
-# enabled = false
+enabled = true
 # Set `clear_storage` to true to clear all the stored info when the keyboard boots
 clear_storage = false
+clear_layout = false
 
 [ble]
 enabled = true
@@ -110,17 +111,13 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-default_tx_power = 1
+default_tx_power = 2
 
 [behavior.morse]
 enable_flow_tap = true
 prior_idle_time = "120ms"
 hold_timeout = "240ms"
 gap_timeout = "230ms"
-
-[[behavior.morse.morses]]
-tap_actions = ["1", "2", "3", "4", "5"]
-hold_actions = ["_", "_", "_", "_", "_"] 
 
 [behavior.combo]
 timeout = "50ms"
@@ -129,11 +126,10 @@ combos = [
 
 #[behavior.fork]
 #forks = [
-#   { trigger = "TD(0)", negative_output = "TD(0)", positive_output = "Macro0", match_any = "LShift|RShift" },
 #]
 
 [rmk]
-combo_max_num = 64 
+combo_max_num = 24
 fork_max_num = 16
 debounce_time = 40
 morse_max_num = 10
