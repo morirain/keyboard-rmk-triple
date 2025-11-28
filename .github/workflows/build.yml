@@ -35,7 +35,7 @@ jobs:
       - name: Get chip name
         id: capture
         run: |
-          OUTPUT=$(rmkit get-chip --keyboard-toml-path ${{ inputs.keyboard_toml_path }})
+          OUTPUT=$(rmkit get-chip --keyboard-toml-path keyboard.toml)
           echo "Command output: $OUTPUT"
           echo "chip_name=$OUTPUT" >> $GITHUB_OUTPUT
 
