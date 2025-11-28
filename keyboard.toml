@@ -100,7 +100,7 @@ reverse = true
 # Storage feature is enabled by default
 # enabled = false
 # Set `clear_storage` to true to clear all the stored info when the keyboard boots
-clear_storage = true
+clear_storage = false
 
 [ble]
 enabled = true
@@ -110,6 +110,7 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
+default_tx_power = 3
 
 [behavior.combo]
 timeout = "150ms"
