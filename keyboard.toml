@@ -99,7 +99,8 @@ reverse = true
 [storage]
 # Storage feature is enabled by default
 # enabled = false
-# clear_storage = true
+# Set `clear_storage` to true to clear all the stored info when the keyboard boots
+clear_storage = false
 
 [ble]
 enabled = true
@@ -123,7 +124,3 @@ forks = [
 combo_max_num = 128 
 fork_max_num = 16
 debounce_time = 30
-
-[storage]
-# Set `clear_storage` to true to clear all the stored info when the keyboard boots
-clear_storage = false
