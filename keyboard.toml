@@ -14,7 +14,7 @@ col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
 # Debouncer mode: "default"(can be ignored) or "fast"
-debouncer = "fast"
+# debouncer = "fast"
 
 [layout]
 rows = 4
@@ -113,23 +113,24 @@ battery_adc_pin = "vddh"
 default_tx_power = 1
 
 [behavior.morse]
-morses = [
-  { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["_", "_", "_", "_", "_"] }
-]
+enable_flow_tap = true
+prior_idle_time = "120ms"
+hold_timeout = "240ms"
+gap_timeout = "230ms"
+
+[[behavior.morse.morses]]
+tap_actions = ["1", "2", "3", "4", "5"]
+hold_actions = ["_", "_", "_", "_", "_"] 
 
 [behavior.combo]
 timeout = "50ms"
 combos = [
 ]
 
-[behavior.fork]
-forks = [
+#[behavior.fork]
+#forks = [
 #   { trigger = "TD(0)", negative_output = "TD(0)", positive_output = "Macro0", match_any = "LShift|RShift" },
-]
-
-[[behavior.macro.macros]]
-operations = [
-]
+#]
 
 [rmk]
 combo_max_num = 64 
