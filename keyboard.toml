@@ -114,12 +114,12 @@ battery_adc_pin = "vddh"
 default_tx_power = 5
 
 [behavior.morse]
-enable_flow_tap = true  
+enable_flow_tap = true
 prior_idle_time = "120ms"
 hold_timeout = "240ms"
 gap_timeout = "230ms"
 morses = [
-  { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["_", "_", "_", "_", "_"] }
+  { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["No", "No", "No", "No", "No"] }
 ]
 
 [behavior.combo]
