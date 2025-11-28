@@ -100,7 +100,7 @@ reverse = true
 # Storage feature is enabled by default
 # enabled = false
 # Set `clear_storage` to true to clear all the stored info when the keyboard boots
-clear_storage = false
+clear_storage = true
 
 [ble]
 enabled = true
