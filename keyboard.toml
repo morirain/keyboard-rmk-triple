@@ -118,14 +118,14 @@ morses = [
 ]
 
 [behavior.combo]
-timeout = "150ms"
+timeout = "50ms"
 combos = [
 ]
 
 [behavior.fork]
-forks = [
-    { trigger = "TD(0)", negative_output = "TD(0)", positive_output = "Macro0", match_any = "LShift|RShift" },
-]
+# forks = [
+#   { trigger = "TD(0)", negative_output = "TD(0)", positive_output = "Macro0", match_any = "LShift|RShift" },
+# ]
 
 [[behavior.macro.macros]]
 operations = [
