@@ -9,8 +9,8 @@ chip = "nrf52840"
 
 [matrix]
 # Row and col pins are mandatory
-input_pins = ["P0_06", "P1_11", "P0_10", "P1_00"]
-output_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
+row_pins = ["P0_06", "P1_11", "P0_10", "P1_00"]
+col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
 # Debouncer mode: "default"(can be ignored) or "fast"
@@ -35,8 +35,8 @@ keymap = [
     ]
 ]
 
-# [host]
-# unlock_keys = [[0, 0], [2, 4], [3, 4]]
+[host]
+unlock_keys = [[0, 0], [2, 4], [3, 4]]
 
 [aliases]
 my_copy = "WM(C, LCtrl)"
@@ -96,11 +96,11 @@ reverse = true
 #   detent = 30, pulse = 15 → resolution = (15 × 4) / 30 = 2
 
 
-[storage]
+# [storage]
 # Storage feature is enabled by default
-enabled = true
+# enabled = true
 # Set `clear_storage` to true to clear all the stored info when the keyboard boots
-clear_storage = false
+# clear_storage = false
 # clear_layout = false
 
 [ble]
@@ -111,13 +111,13 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-# default_tx_power = 2
+default_tx_power = 2
 
-# [behavior.morse]
-# enable_flow_tap = true
-# prior_idle_time = "120ms"
-# hold_timeout = "240ms"
-# gap_timeout = "230ms"
+[behavior.morse]
+enable_flow_tap = true
+prior_idle_time = "120ms"
+hold_timeout = "240ms"
+gap_timeout = "230ms"
 
 [behavior.combo]
 timeout = "50ms"
@@ -129,8 +129,8 @@ combos = [
 #]
 
 [rmk]
-combo_max_num = 4
-fork_max_num = 4
+combo_max_num = 24
+fork_max_num = 16
 debounce_time = 40
-# morse_max_num = 10
-# max_patterns_per_key = 16
+morse_max_num = 10
+max_patterns_per_key = 16
