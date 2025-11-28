@@ -111,7 +111,7 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-default_tx_power = 2
+default_tx_power = 6
 
 [behavior.morse]
 enable_flow_tap = true
@@ -129,8 +129,8 @@ combos = [
 #]
 
 [rmk]
-combo_max_num = 24
-fork_max_num = 16
+combo_max_num = 12
+fork_max_num = 8
 debounce_time = 40
-morse_max_num = 10
-max_patterns_per_key = 16
+morse_max_num = 8
+max_patterns_per_key = 8
