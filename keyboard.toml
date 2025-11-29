@@ -22,10 +22,10 @@ cols = 5
 layers = 6
 keymap = [
     [
-        ["MO(1)", "Escape", "Q", "W", "Delete"],
+        ["LT(1, Escape)", "Escape", "Q", "W", "Delete"],
         ["Macro0", "A", "S", "D", "No"],
-        ["LShift", "Z", "X", "C", "_"],
-        ["LCtrl", "LAlt", "No", "Space", "_"]
+        ["MT(A, LShift)", "Z", "X", "C", "_"],
+        ["MT(Z, LCtrl)", "MT(X, LAlt)", "No", "Space", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
@@ -57,32 +57,6 @@ keymap = [
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
-]
-
-[[behavior.macro.macros]]
-operations = [
-  { operation = "tap", keycode = "1" },
-  { operation = "tap", keycode = "DF(1)" }
-]
-[[behavior.macro.macros]]
-operations = [
-  { operation = "tap", keycode = "2" },
-  { operation = "tap", keycode = "DF(2)" }
-]
-[[behavior.macro.macros]]
-operations = [
-  { operation = "tap", keycode = "3" },
-  { operation = "tap", keycode = "DF(3)" }
-]
-[[behavior.macro.macros]]
-operations = [
-  { operation = "tap", keycode = "4" },
-  { operation = "tap", keycode = "DF(4)" }
-]
-[[behavior.macro.macros]]
-operations = [
-  { operation = "tap", keycode = "5" },
-  { operation = "tap", keycode = "DF(0)" }
 ]
 
 [host]
