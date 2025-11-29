@@ -35,20 +35,20 @@ keymap = [
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["_", "_", "_", "_", "No"],
+        ["Macro2", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["_", "_", "_", "_", "No"],
-        ["_", "_", "_", "1_", "_"],
+        ["Macro3", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["_", "_", "_", "_", "No"],
-        ["_", "_", "_", "1_", "_"],
+        ["Macro4", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
@@ -68,6 +68,21 @@ operations = [
 operations = [
   { operation = "tap", keycode = "2" },
   { operation = "tap", keycode = "DF(2)" }
+]
+[[behavior.macro.macros]]
+operations = [
+  { operation = "tap", keycode = "3" },
+  { operation = "tap", keycode = "DF(3)" }
+]
+[[behavior.macro.macros]]
+operations = [
+  { operation = "tap", keycode = "4" },
+  { operation = "tap", keycode = "DF(4)" }
+]
+[[behavior.macro.macros]]
+operations = [
+  { operation = "tap", keycode = "5" },
+  { operation = "tap", keycode = "DF(0)" }
 ]
 
 [host]
