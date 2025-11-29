@@ -19,20 +19,55 @@ col_pins = ["P0_02", "P1_15", "P1_04", "P0_11", "P1_06"]
 [layout]
 rows = 4
 cols = 5
-layers = 2
+layers = 6
 keymap = [
     [
         ["MO(1)", "Escape", "Q", "W", "Delete"],
-        ["Tab", "A", "S", "D", "No"],
+        ["Macro0", "A", "S", "D", "No"],
         ["LShift", "Z", "X", "C", "_"],
         ["LCtrl", "LAlt", "No", "Space", "_"]
+    ],
+    [
+        ["_", "_", "_", "_", "_"],
+        ["Macro1", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "No", "_", "_"]
+    ],
+    [
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "No", "_", "_"]
+    ],
+    [
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "No"],
+        ["_", "_", "_", "1_", "_"],
+        ["_", "_", "No", "_", "_"]
+    ],
+    [
+        ["_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "No"],
+        ["_", "_", "_", "1_", "_"],
+        ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "User0", "User1", "User2", "_"],
         ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
-    ]
+    ],
+]
+
+[[behavior.macro.macros]]
+operations = [
+  { operation = "tap", keycode = "1" },
+  { operation = "tap", keycode = "DF(1)" }
+]
+[[behavior.macro.macros]]
+operations = [
+  { operation = "tap", keycode = "2" },
+  { operation = "tap", keycode = "DF(2)" }
 ]
 
 [host]
@@ -111,16 +146,16 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-default_tx_power = 4
+default_tx_power = 5
 
 [behavior.morse]
 enable_flow_tap = true
 prior_idle_time = "120ms"
 hold_timeout = "240ms"
 gap_timeout = "230ms"
-morses = [
-  { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["No", "No", "No", "No", "No"] }
-]
+# morses = [
+#   { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["No", "No", "No", "No", "No"] }
+# ]
 
 [behavior.combo]
 timeout = "50ms"
