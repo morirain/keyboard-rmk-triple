@@ -82,7 +82,7 @@ reverse = true
 # - default: resolution = 1
 # - resolution: custom resolution, requires specifying resolution and reverse parameters
 
-# `resolution` represents the number of steps generated per detent.
+# `resolution` represents the number of steps generated per detent.  
 #
 # When your encoder datasheet lists:
 #   - detent = number of mechanical detent positions  
@@ -111,7 +111,7 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-default_tx_power = 5
+default_tx_power = 4
 
 [behavior.morse]
 enable_flow_tap = true
@@ -137,3 +137,5 @@ fork_max_num = 8
 debounce_time = 40
 morse_max_num = 8
 max_patterns_per_key = 8
+# Mouse wheel interval (ms) - controls scrolling speed
+mouse_wheel_interval = 40
