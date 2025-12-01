@@ -139,8 +139,9 @@ default_tx_power = 7
 
 [behavior.morse]
 enable_flow_tap = true
+hold_on_other_press = true
 prior_idle_time = "120ms"
-hold_timeout = "150ms"
+hold_timeout = "220ms"
 gap_timeout = "230ms"
 # morses = [
 #   { tap_actions = ["1", "2", "3", "4", "5"], hold_actions = ["No", "No", "No", "No", "No"] }
