@@ -22,37 +22,37 @@ cols = 5
 layers = 6
 keymap = [
     [
-        ["LT(1, Escape)", "Escape", "Q", "W", "Delete"],
+        ["LT(5, Escape)", "Escape", "Q", "W", "Delete"],
         ["Macro0", "A", "S", "D", "No"],
         ["MT(A, LShift)", "Z", "X", "C", "_"],
         ["MT(Z, LCtrl)", "MT(X, LAlt)", "No", "Space", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["Macro1", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["Macro2", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["Macro3", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
         ["_", "_", "_", "_", "_"],
-        ["Macro4", "_", "_", "_", "No"],
+        ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
     ],
     [
-        ["_", "User0", "User1", "User2", "_"],
+        ["_", "User0", "User1", "User2", "Bootloader"],
         ["_", "_", "_", "_", "No"],
         ["_", "_", "_", "_", "_"],
         ["_", "_", "No", "_", "_"]
@@ -82,14 +82,14 @@ pin_a = "P0_29"
 pin_b = "P0_31"
 internal_pullup = true
 phase = "resolution"
-resolution = 1
+resolution = 4
 # Encoder 2
 [[input_device.encoder]]
 pin_a = "P0_20"
 pin_b = "P0_17"
 internal_pullup = true
 phase = "resolution"
-resolution = 1
+resolution = 4
 reverse = true
 # Encoder 3
 [[input_device.encoder]]
@@ -97,7 +97,7 @@ pin_a = "P0_24"
 pin_b = "P1_01"
 internal_pullup = true
 phase = "resolution"
-resolution = 1
+resolution = 4
 # Whether the direction of the rotary encoder is reversed.
 reverse = true
 # Whether to use the MCU's internal pull-up resistor, default to false
@@ -135,7 +135,7 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
-default_tx_power = 5
+default_tx_power = 6
 
 [behavior.morse]
 enable_flow_tap = true
